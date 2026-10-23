@@ -1,0 +1,5 @@
+read_verilog -sv rtl/sync_fifo.sv examples/fifo_top.sv
+hierarchy -check -top fifo_top
+synth -top fifo_top
+stat
+write_json build/fifo_top.json
